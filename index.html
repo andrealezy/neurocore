@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="https://lh3.googleusercontent.com/pw/AP1GczMP3mTFnLeXF-XFiU5WZz0PDKXli5BYWYYNykfJ1oSvGwUiMv5YJDUmnzT30avrfMUYcfe0SsWRi034o3UyIUlA4cE18vOawqW_EWrbriz6saCX1Du06QzVu7qDWAwvM0qLrUTH1ow7d0epcYjTr8XoMQ=w70-h64-s-no-gm?authuser=0"
+    type="image/x-icon">
+  <meta name="description" content="andrealezy - alezysolution - redes-expert.com.br">
+  <meta name="author" content="Andreaalezy">
+  <meta name="description"
+    content="NeuroCore - O Futuro da Inteligência Artificial. Plataforma de IA avançada para empresas, soluções inteligentes e tecnologia de ponta para transformar ideias em realidade.">
+  <title>NeuroCore - O Futuro da Inteligência Artificial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">s
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta property="og:url" content="https://redes-expert.com.br/">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">Neuro<span class="logo-accent">Core</span></span>
+        <div class="logo-glow"></div>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link">Início</a></li>
+        <li><a href="#about" class="nav-link">Sobre IA</a></li>
+        <li><a href="#demo" class="nav-link">Demonstração</a></li>
+        <li><a href="#products" class="nav-link">Produtos</a></li>
+        <li><a href="#testimonials" class="nav-link">Casos</a></li>
+        <li><a href="#contact" class="nav-link">Contato</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-login" id="loginBtn">Login</button>
+        <button class="btn-menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="neural-network" id="neuralNetwork"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="title-line">O Futuro da</span>
+          <span class="title-line accent">Inteligência Artificial</span>
+          <span class="title-line">Começa Aqui</span>
+        </h1>
+        <p class="hero-subtitle">Descubra o poder da IA mais avançada do universo. Tecnologia que transforma ideias em
+          realidade.</p>
+        <div class="hero-buttons">
+          <button class="btn-primary" id="ctaBtn">
+            <span>Explorar Agora</span>
+            <div class="btn-glow"></div>
+          </button>
+          <button class="btn-secondary" id="watchVideoBtn">
+            <i class="fas fa-play"></i>
+            <span>Ver Demonstração</span>
+          </button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="spline-card">
+          <svg class="spotlight-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3787 2842" fill="none">
+            <g filter="url(#spotlight-filter)">
+              <ellipse cx="1924.71" cy="273.501" rx="1924.71" ry="273.501"
+                transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)" fill="white"
+                fill-opacity="0.21"></ellipse>
+            </g>
+            <defs>
+              <filter id="spotlight-filter" x="0.860352" y="0.838989" width="3785.16" height="2840.26"
+                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                <feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur_1065_8"></feGaussianBlur>
+              </filter>
+            </defs>
+          </svg>
+
+          <div class="spline-card-content">
+            <div class="spline-left-content">
+              <h1 class="spline-title">
+                AMBIENTES 3D INTELIGENTES
+              </h1>
+              <p class="spline-description">
+                Integramos IA a modelos 3D para criar interfaces que aprendem, se adaptam e impressionam. Tecnologia que
+                vai além do visual — ela pensa junto com você.
+              </p>
+            </div>
+
+            <div class="spline-right-content">
+              <div id="spline-container" class="spline-scene">
+                <div class="spline-loader">
+                  <div class="loader-spinner"></div>
+                  <span>Carregando cena 3D...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tecnologia Avançada</span>
+        <h2 class="section-title">Como Nossa IA Funciona</h2>
+        <p class="section-description">Uma arquitetura neural revolucionária que processa informações em múltiplas
+          dimensões</p>
+      </div>
+      <div class="about-content">
+        <div class="about-visual">
+          <div class="ai-brain">
+            <div class="brain-node" data-node="1"></div>
+            <div class="brain-node" data-node="2"></div>
+            <div class="brain-node" data-node="3"></div>
+            <div class="brain-node" data-node="4"></div>
+            <div class="brain-node" data-node="5"></div>
+            <div class="brain-connection"></div>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="floating-card" data-card="1">
+            <div class="card-icon"><i class="fas fa-brain"></i></div>
+            <h3>Processamento Neural</h3>
+            <p>Algoritmos de deep learning que aprendem e evoluem continuamente</p>
+          </div>
+          <div class="floating-card" data-card="2">
+            <div class="card-icon"><i class="fas fa-atom"></i></div>
+            <h3>Análise Quântica</h3>
+            <p>Processamento em múltiplas dimensões simultaneamente</p>
+          </div>
+          <div class="floating-card" data-card="3">
+            <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Predição Avançada</h3>
+            <p>Previsões precisas com base em padrões complexos</p>
+          </div>
+          <div class="floating-card" data-card="4">
+            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Segurança Total</h3>
+            <p>Proteção criptográfica de última geração</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Experimente Agora</span>
+        <h2 class="section-title">Demonstração Interativa</h2>
+        <p class="section-description">Interaja com nossa IA e descubra suas capacidades</p>
+      </div>
+      <div class="demo-container">
+        <div class="demo-interface">
+          <div class="demo-header">
+            <div class="demo-status">
+              <span class="status-dot"></span>
+              <span>IA Online</span>
+            </div>
+            <div class="demo-controls">
+              <button class="control-btn" data-function="ideas"><i class="fas fa-lightbulb"></i> Gerar Ideias</button>
+              <button class="control-btn" data-function="analyze"><i class="fas fa-search"></i> Analisar Texto</button>
+              <button class="control-btn" data-function="translate"><i class="fas fa-language"></i> Traduzir</button>
+            </div>
+          </div>
+          <div class="demo-input-area">
+            <textarea id="demoInput" placeholder="Digite sua pergunta ou comando aqui..."></textarea>
+            <div class="input-glow"></div>
+          </div>
+          <button class="btn-submit" id="demoSubmit">
+            <span>Enviar</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="demo-output" id="demoOutput">
+            <div class="output-placeholder">
+              <i class="fas fa-robot"></i>
+              <p>A resposta da IA aparecerá aqui...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nossas Soluções</span>
+        <h2 class="section-title">Produtos e Tecnologias</h2>
+        <p class="section-description">Soluções de IA para transformar seu negócio</p>
+      </div>
+      <div class="products-grid">
+        <div class="product-card" data-product="1">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Chatbot Avançado</h3>
+          <p>Assistente virtual com compreensão contextual e emocional</p>
+          <ul class="card-features">
+            <li><i class="fas fa-check"></i> Respostas instantâneas</li>
+            <li><i class="fas fa-check"></i> Aprendizado contínuo</li>
+            <li><i class="fas fa-check"></i> Multi-idioma</li>
+          </ul>
+          <button class="card-btn">Saiba Mais</button>
+        </div>
+        <div class="product-card" data-product="2">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <i class="fas fa-image"></i>
+          </div>
+          <h3>Geração de Imagens</h3>
+          <p>Crie imagens realistas e artísticas com comandos de texto</p>
+          <ul class="card-features">
+            <li><i class="fas fa-check"></i> Alta qualidade</li>
+            <li><i class="fas fa-check"></i> Estilos diversos</li>
+            <li><i class="fas fa-check"></i> Edição integrada</li>
+          </ul>
+          <button class="card-btn">Saiba Mais</button>
+        </div>
+        <div class="product-card" data-product="3">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <h3>Análise de Dados</h3>
+          <p>Insights inteligentes de grandes volumes de informação</p>
+          <ul class="card-features">
+            <li><i class="fas fa-check"></i> Processamento rápido</li>
+            <li><i class="fas fa-check"></i> Visualizações 3D</li>
+            <li><i class="fas fa-check"></i> Relatórios automáticos</li>
+          </ul>
+          <button class="card-btn">Saiba Mais</button>
+        </div>
+        <div class="product-card" data-product="4">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Programação Assistida</h3>
+          <p>Gere código de alta qualidade com assistência de IA</p>
+          <ul class="card-features">
+            <li><i class="fas fa-check"></i> Múltiplas linguagens</li>
+            <li><i class="fas fa-check"></i> Debug inteligente</li>
+            <li><i class="fas fa-check"></i> Otimização automática</li>
+          </ul>
+          <button class="card-btn">Saiba Mais</button>
+        </div>
+        <div class="product-card" data-product="5">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3>Edição de Vídeo IA</h3>
+          <p>Produza conteúdo profissional com edição automática</p>
+          <ul class="card-features">
+            <li><i class="fas fa-check"></i> Cortes inteligentes</li>
+            <li><i class="fas fa-check"></i> Efeitos automáticos</li>
+            <li><i class="fas fa-check"></i> Sincronização perfeita</li>
+          </ul>
+          <button class="card-btn">Saiba Mais</button>
+        </div>
+        <div class="product-card" data-product="6">
+          <div class="card-glow"></div>
+          <div class="card-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Segurança Cibernética</h3>
+          <p>Proteção avançada contra ameaças digitais</p>
+          <ul class="card-features">
+            <li><i class="fas fa-check"></i> Detecção em tempo real</li>
+            <li><i class="fas fa-check"></i> Prevenção proativa</li>
+            <li><i class="fas fa-check"></i> Análise comportamental</li>
+          </ul>
+          <button class="card-btn">Saiba Mais</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="testimonials-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Histórias Reais</span>
+        <h2 class="section-title">Casos de Sucesso</h2>
+        <p class="section-description">Veja como empresas transformaram seus negócios com nossa IA</p>
+      </div>
+      <div class="testimonials-slider">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-slide active">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">"A NeuroCore revolucionou nossa operação. Aumentamos a produtividade em 300% e
+                reduzimos custos significativamente. A IA é simplesmente incrível!"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                  <h4>Maria Silva</h4>
+                  <p>CEO, TechCorp Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">"Implementamos a solução de análise de dados e os resultados superaram todas
+                as expectativas. Insights que antes levavam semanas, agora são gerados em minutos."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                  <h4>João Santos</h4>
+                  <p>Diretor de Inovação, DataFlow Inc</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">"O chatbot transformou completamente o atendimento ao cliente. Nossos clientes
+                ficaram impressionados com a qualidade das respostas e a velocidade."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                  <h4>Ana Costa</h4>
+                  <p>Gerente de CX, Global Services</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn prev" id="prevTestimonial"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+          <button class="slider-btn next" id="nextTestimonial"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Conecte-se</span>
+        <h2 class="section-title">Conecte-se com a IA</h2>
+        <p class="section-description">Entre em contato e descubra como podemos transformar seu negócio</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+            <h3>Email</h3>
+            <p>contato@neurocore.ai</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-phone"></i></div>
+            <h3>Telefone</h3>
+            <p>+55 (11) 9999-9999</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Endereço</h3>
+            <p>São Paulo, SP - Brasil</p>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" data-social="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" data-social="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" data-social="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" data-social="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" data-social="github"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" required>
+              <label for="name">Nome</label>
+              <div class="input-line"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" required>
+              <label for="email">Email</label>
+              <div class="input-line"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" required>
+              <label for="subject">Assunto</label>
+              <div class="input-line"></div>
+            </div>
+            <div class="form-group">
+              <textarea id="message" required></textarea>
+              <label for="message">Mensagem</label>
+              <div class="input-line"></div>
+            </div>
+            <button type="submit" class="btn-submit-form">
+              <span>Enviar Mensagem</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="chat-button" id="chatButton">
+    <i class="fas fa-comments"></i>
+    <span class="chat-pulse"></span>
+  </div>
+
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+      <div class="chat-status">
+        <span class="status-dot"></span>
+        <span>Assistente IA</span>
+      </div>
+      <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-message ai">
+        <p>Olá! Sou o assistente da NeuroCore. Como posso ajudar você hoje?</p>
+      </div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+      <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>NeuroCore</h3>
+          <p>O futuro da inteligência artificial está aqui. Transforme seu negócio com tecnologia de ponta.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#about">Sobre IA</a></li>
+            <li><a href="#products">Produtos</a></li>
+            <li><a href="#demo">Demonstração</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="#">Documentação</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Suporte</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacidade</a></li>
+            <li><a href="#">Termos</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="ano">2000</span> NeuroCore. Todos os direitos reservados. www.redes-expert.com.br</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeLoginModal"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <h2>Acessar NeuroCore</h2>
+        <p>Entre na plataforma e desbloqueie o poder da IA</p>
+      </div>
+      <form class="modal-form" id="loginForm">
+        <div class="form-group">
+          <input type="email" id="loginEmail" required>
+          <label for="loginEmail">Email</label>
+          <div class="input-line"></div>
+        </div>
+        <div class="form-group">
+          <input type="password" id="loginPassword" required>
+          <label for="loginPassword">Senha</label>
+          <div class="input-line"></div>
+        </div>
+        <button type="submit" class="btn-modal-submit">Entrar</button>
+        <p class="modal-link">Não tem conta? <a href="#" id="showRegister">Cadastre-se</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="registerModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeRegisterModal"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <h2>Criar Conta</h2>
+        <p>Junte-se à revolução da IA</p>
+      </div>
+      <form class="modal-form" id="registerForm">
+        <div class="form-group">
+          <input type="text" id="registerName" required>
+          <label for="registerName">Nome Completo</label>
+          <div class="input-line"></div>
+        </div>
+        <div class="form-group">
+          <input type="email" id="registerEmail" required>
+          <label for="registerEmail">Email</label>
+          <div class="input-line"></div>
+        </div>
+        <div class="form-group">
+          <input type="password" id="registerPassword" required>
+          <label for="registerPassword">Senha</label>
+          <div class="input-line"></div>
+        </div>
+        <button type="submit" class="btn-modal-submit">Cadastrar</button>
+        <p class="modal-link">Já tem conta? <a href="#" id="showLogin">Entrar</a></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="videoModal">
+    <div class="modal-content video-modal">
+      <button class="modal-close" id="closeVideoModal"><i class="fas fa-times"></i></button>
+      <div class="video-container">
+        <iframe id="demoVideo" src="https://www.youtube.com/embed/mHrsPyo_14Q?si=KnWr8hSPVS4oR21A" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="successModal">
+    <div class="modal-content success-modal">
+      <button class="modal-close" id="closeSuccessModal"><i class="fas fa-times"></i></button>
+      <div class="success-content">
+        <div class="success-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Mensagem Enviada!</h2>
+        <p>Sua mensagem foi recebida com sucesso. Nossa equipe entrará em contato em breve.</p>
+        <button class="btn-modal-submit" id="closeSuccessBtn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
